@@ -13,3 +13,8 @@ services:
       - ./config/gitlab:/var/opt/gitlab
       - ./data/gitlab:/etc/gitlab
     restart: unless-stopped
+
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: gitlab-runner
+    network_mode: 'host'
