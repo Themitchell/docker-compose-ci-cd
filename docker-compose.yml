@@ -1,6 +1,7 @@
 ---
 services:
   gitlab:
+    hostname: ${GITLAB_HOST}
     container_name: gitlab
     image: gitlab/gitlab-ce
     ports:
