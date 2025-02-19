@@ -5,7 +5,9 @@ services:
     container_name: gitlab
     image: gitlab/gitlab-ce
     ports:
-      - 8001:80
+      - "8001:80"
+      - "2222:22"
+
     env_file: .env
     volumes:
       - ./config/gitlab:/var/opt/gitlab
