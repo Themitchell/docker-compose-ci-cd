@@ -1,0 +1,12 @@
+---
+services:
+  gitlab:
+    container_name: gitlab
+    image: gitlab/gitlab-ce
+    ports:
+      - 8001:80
+    env_file: .env
+    volumes:
+      - ./config/gitlab:/var/opt/gitlab
+      - ./data/gitlab:/etc/gitlab
+    restart: unless-stopped
