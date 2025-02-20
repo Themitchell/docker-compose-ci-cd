@@ -6,6 +6,7 @@ services:
     image: gitlab/gitlab-ce
     ports:
       - "8001:80"
+      - "5678:5678"
       - "2222:22"
 
     env_file: .env
